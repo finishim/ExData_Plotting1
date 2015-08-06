@@ -16,4 +16,8 @@ plot2 <- function() {
     power[,1] <- as.Date(power[,1],format='%d/%m/%Y')
     power <- power[(power$Date=="2007/02/01") | (power$Date=="2007/02/02"),]
     
+    ## Combine date and time
+    power <- within(power, datetime <- strptime(paste(power$Date, power$Time), "%Y-%m-%d %H:%M:%S"))
+    ### source: http://stackoverflow.com/questions/5250978/colclasses-date-and-time-read-csv
+    
 }
