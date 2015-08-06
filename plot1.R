@@ -21,3 +21,8 @@ power <- power[(power$Date=="2007/02/01") | (power$Date=="2007/02/02"),]
 
 # Plot the histogram of Global Active Power
 hist(power$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
+
+# Save the plot to a file
+dev.copy(device = png, filename = 'Plot1.png', width = 480, height = 480)
+dev.off()
+### source: http://stackoverflow.com/questions/7144118/how-to-save-a-plot-as-image-on-the-disk
