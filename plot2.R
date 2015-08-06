@@ -20,4 +20,12 @@ plot2 <- function() {
     power <- within(power, datetime <- strptime(paste(power$Date, power$Time), "%Y-%m-%d %H:%M:%S"))
     ### source: http://stackoverflow.com/questions/5250978/colclasses-date-and-time-read-csv
     
+    #Plot the graph
+    plot(power$datetime, power$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
+    
+    # Save the plot to a file
+    dev.copy(device = png, filename = 'plot2.png', width = 480, height = 480)
+    dev.off()
+    ### source: http://stackoverflow.com/questions/7144118/how-to-save-a-plot-as-image-on-the-disk
+    
 }
