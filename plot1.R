@@ -7,7 +7,6 @@ url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_co
 download.file(url, destfile = ".\\data\\power.zip", mode = "wb")
 file <- unzip(".\\data\\power.zip", exdir = ".\\data")
 
-
 # We will only be using data from the dates 2007-02-01 and 2007-02-02. 
 
 ## Read the data from just those dates
@@ -20,4 +19,5 @@ power <- read.table(file, header=TRUE, sep=";", na.strings="?", stringsAsFactors
 power[,1] <- as.Date(power[,1],format='%d/%m/%Y')
 power <- power[(power$Date=="2007/02/01") | (power$Date=="2007/02/02"),]
 
-## Convert Date and Time variables to Date/Time classes in R using the `strptime()` and `as.Date()`
+# Plot the histogram of Global Active Power
+hist(power$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
