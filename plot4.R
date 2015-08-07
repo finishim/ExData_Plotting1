@@ -28,22 +28,25 @@ plot4 <- function() {
     # Plot the graphs
     
     
+    ## Open PNG Device
     png(filename = 'plot4.png', width = 480, height = 480)
     
+    ## Form a 2x2 viewing
     par(mfrow=c(2,2))
     ### source: http://research.stowers-institute.org/efg/R/Graphics/Basics/mar-oma/index.htm
     
-    ## 1st plot same as plot2
+    ## 1st plot almost same as plot2.R
     plot(power$datetime, power$Global_active_power, type="l", xlab="", ylab="Global Active Power")
     
     ## 2nd plot
     plot(power$datetime, power$Voltage, type="l", xlab="datetime", ylab="Voltage")
     
-    ## 3rd plot same as plot3
+    ## 3rd plot same as plot3.R
     plot(power$datetime, power$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering")
     lines(power$datetime, power$Sub_metering_2, type="l", col="red")
     lines(power$datetime, power$Sub_metering_3, type="l", col="blue")
     ### source: http://stackoverflow.com/questions/2564258/plot-two-graphs-in-same-plot-in-r
+    
     ## Add Legend
     legend(x="topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black", "red", "blue"), lty=1, lwd=1,  bty="n")
     ### source: http://www.inside-r.org/r-doc/graphics/legend

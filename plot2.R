@@ -26,6 +26,8 @@ plot2 <- function() {
     
     
     #Plot the graph
+    
+    
     plot(power$datetime, power$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
     
     
