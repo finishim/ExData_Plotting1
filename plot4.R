@@ -23,6 +23,11 @@ plot4 <- function() {
     # Plot the graphs
     par(mfrow=c(2,2), mar=c(5.1,4.1,4.1,2.1), oma=c(0,0,0,0))
     ### source: http://research.stowers-institute.org/efg/R/Graphics/Basics/mar-oma/index.htm
+    
+    ## 1st plot same as plot2
+    plot(power$datetime, power$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
+    
+    ## 3rd plot same as plot3
     plot(power$datetime, power$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering")
     lines(power$datetime, power$Sub_metering_2, type="l", col="red")
     lines(power$datetime, power$Sub_metering_3, type="l", col="blue")
