@@ -28,6 +28,8 @@ plot4 <- function() {
     # Plot the graphs
     
     
+    png(filename = 'plot4.png', width = 480, height = 480)
+    
     par(mfrow=c(2,2))
     ### source: http://research.stowers-institute.org/efg/R/Graphics/Basics/mar-oma/index.htm
     
@@ -53,7 +55,7 @@ plot4 <- function() {
     # Save the plot to a file
     
     
-    dev.copy(device = png, filename = 'plot4.png', width = 480, height = 480)
+    #dev.copy(device = png, filename = 'plot4.png', width = 480, height = 480)
     dev.off()
     ### source: http://stackoverflow.com/questions/7144118/how-to-save-a-plot-as-image-on-the-disk
     
