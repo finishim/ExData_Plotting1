@@ -27,11 +27,17 @@ plot4 <- function() {
     ## 1st plot same as plot2
     plot(power$datetime, power$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
     
+    ## 2nd plot
+    plot(power$datetime, power$Voltage, type="l", xlab="datetime", ylab="Voltage")
+    
     ## 3rd plot same as plot3
     plot(power$datetime, power$Sub_metering_1, type="l", xlab="", ylab="Energy sub metering")
     lines(power$datetime, power$Sub_metering_2, type="l", col="red")
     lines(power$datetime, power$Sub_metering_3, type="l", col="blue")
     ### source: http://stackoverflow.com/questions/2564258/plot-two-graphs-in-same-plot-in-r
+    
+    ## 4th plot
+    plot(power$datetime, power$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
     
     # Add Legend
     legend(x="topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black", "red", "blue"), lty=1, lwd=2)
