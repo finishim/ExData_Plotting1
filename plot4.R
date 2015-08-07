@@ -28,7 +28,7 @@ plot4 <- function() {
     # Plot the graphs
     
     
-    par(mfrow=c(2,2), mar=c(5.1,4.1,4.1,2.1), oma=c(0,0,0,0))
+    par(mfrow=c(2,2))
     ### source: http://research.stowers-institute.org/efg/R/Graphics/Basics/mar-oma/index.htm
     
     ## 1st plot same as plot2
@@ -43,11 +43,11 @@ plot4 <- function() {
     lines(power$datetime, power$Sub_metering_3, type="l", col="blue")
     ### source: http://stackoverflow.com/questions/2564258/plot-two-graphs-in-same-plot-in-r
     ## Add Legend
-    legend(x="topright", c("Sub_metering_1 ", "Sub_metering_2 ", "Sub_metering_3 "), col=c("black", "red", "blue"), lty=1, lwd=2,  bty="n", cex=.5)
+    legend(x="topright", c("Sub_metering_1  ", "Sub_metering_2  ", "Sub_metering_3  "), col=c("black", "red", "blue"), lty=1, lwd=1,  bty="n", cex=0.5)
     ### source: http://www.inside-r.org/r-doc/graphics/legend
     
     ## 4th plot
-    plot(power$datetime, power$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
+    plot(power$datetime, power$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power", lwd=0.5)
     
     
     # Save the plot to a file
