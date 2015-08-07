@@ -13,13 +13,7 @@ plot1 <- function() {
     
     
     # We will only be using data from the dates 2007-02-01 and 2007-02-02. 
-    
-    
-    ## Read the data from just those dates
-    ##library(sqldf)
-    ##power2 <- read.csv.sql(file, header=TRUE, sep=";", stringsAsFactors=FALSE, sql = 'select * from file where Date = "2007-02-01" or Date = "2007-02-02"')
-    ### source: http://stackoverflow.com/questions/3554572/read-csv-with-dates-and-numbers-with-r-statistical-software
-    
+
     
     ## Read all the data and subset
     power <- read.table(file, header=TRUE, sep=";", na.strings="?", stringsAsFactors=FALSE)
@@ -28,6 +22,8 @@ plot1 <- function() {
     
     
     # Plot the histogram of Global Active Power
+    
+    
     hist(power$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
     
     
