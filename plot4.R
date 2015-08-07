@@ -43,7 +43,7 @@ plot4 <- function() {
     lines(power$datetime, power$Sub_metering_3, type="l", col="blue")
     ### source: http://stackoverflow.com/questions/2564258/plot-two-graphs-in-same-plot-in-r
     ## Add Legend
-    legend(x="topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black", "red", "blue"), lty=1, lwd=2,  bty="n", cex=.5)
+    legend(x="topright", c("Sub_metering_1 ", "Sub_metering_2 ", "Sub_metering_3 "), col=c("black", "red", "blue"), lty=1, lwd=2,  bty="n", cex=.5)
     ### source: http://www.inside-r.org/r-doc/graphics/legend
     
     ## 4th plot
