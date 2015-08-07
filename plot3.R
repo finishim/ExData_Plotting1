@@ -41,7 +41,7 @@ plot3 <- function() {
     # Add Legend
     
     
-    legend(x="topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black", "red", "blue"), lty=1, lwd=2)
+    legend(x="topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), col=c("black", "red", "blue"), lty=1, lwd=1)
     ### source: http://www.inside-r.org/r-doc/graphics/legend
     
     
